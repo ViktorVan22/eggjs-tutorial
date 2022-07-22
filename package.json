@@ -8,7 +8,10 @@
   },
   "dependencies": {
     "egg": "^2",
-    "egg-scripts": "^2"
+    "egg-cors": "^2.2.3",
+    "egg-scripts": "^2",
+    "mkdirp": "^1.0.4",
+    "moment": "^2.29.4"
   },
   "devDependencies": {
     "autod": "^3",

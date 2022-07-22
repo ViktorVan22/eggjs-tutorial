@@ -125,27 +125,28 @@ class UserController extends Controller {
 
   async editUserInfo() {
     const { ctx, app } = this;
-    const { signature = "" } = ctx.request.body;
-    let user_id;
+    const { signature = "", avatar = "" } = ctx.request.body;
+
     const token = ctx.request.header.authorization;
     const decode = app.jwt.verify(token, app.config.jwt.secret);
 
     if (!decode) return;
 
-    user_id = decode.id;
     const userInfo = await ctx.service.user.getUserByName(decode.username);
     const result = await ctx.service.user.editUserInfo({
       ...userInfo,
       signature,
+      avatar,
     });
 
     ctx.body = {
       code: 200,
-      msg: "请求成功",
+      msg: "修改成功",
       data: {
-        id: user_id,
+        id: decode.id,
         signature,
         username: userInfo.username,
+        avatar,
       },
     };
   }
