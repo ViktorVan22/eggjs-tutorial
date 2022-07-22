@@ -6,8 +6,12 @@ module.exports = {
     enable: true,
     package: "egg-view-ejs",
   },
-  mysql:{
-    enable:true,
-    package:'egg-mysql'
-  }
+  mysql: {
+    enable: true,
+    package: "egg-mysql",
+  },
+  jwt: {
+    enable: true,
+    package: "egg-jwt",
+  },
 };
