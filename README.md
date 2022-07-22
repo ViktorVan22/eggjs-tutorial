@@ -1,10 +1,8 @@
-# book-keeping-fullstack
+# eggjs-tutorial
 
-前后端分离的记账项目，适合移动端使用。
+基于`Koa`二次封装的`egg`框架教程
 
-后端：`eggjs`
-前端： `React`
-数据库： `Mysql`
+实现客户端发送请求，服务端根据请求体对数据库进行CRUD操作的基本功能
 
 ## Create Project
 
